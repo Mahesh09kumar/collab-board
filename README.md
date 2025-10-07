@@ -19,6 +19,8 @@ Multiple users can draw on the same board simultaneously and see each other's up
 
 ![demo](./img/screenshot1.png)
 
+![demo](./img/screenshot2.png)
+
 ---
 
 ## 🧰 Tech Stack
