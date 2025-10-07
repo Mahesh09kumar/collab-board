@@ -15,7 +15,7 @@ Multiple users can draw on the same board simultaneously and see each other's up
 - 🧑‍🤝‍🧑 Multi-user support
 - 🧱 Built with simple and clean architecture
 
---
+---
 
 ![demo](./img/screenshot1.png)
 
@@ -24,7 +24,7 @@ Multiple users can draw on the same board simultaneously and see each other's up
 ## 🧰 Tech Stack
 
 - **Frontend:** HTML, CSS, JavaScript (Canvas API)
-- **Backend:** Node.js + Express.js
+- **Backend:** Node.js
 - **Realtime:** websocket
 
 ---

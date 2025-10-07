@@ -1,0 +1,23 @@
+{
+  "name": "web-scribble-board-using-websocket",
+  "version": "1.0.0",
+  "description": "A real-time collaborative whiteboard app built with **HTML5 Canvas**, and **websocket** \r Multiple users can draw on the same board simultaneously and see each other's updates instantly.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mahesh09kumar/collab-board.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mahesh09kumar/collab-board/issues"
+  },
+  "homepage": "https://github.com/Mahesh09kumar/collab-board#readme",
+  "dependencies": {
+    "ws": "^8.18.3"
+  }
+}

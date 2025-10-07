@@ -20,6 +20,14 @@ canvas.height = canvas.width/aspect_ratio ;
         ctx.lineTo(e.offsetX, e.offsetY);
         console.log(mouseX,mouseY);
         ctx.stroke();
+       //sends data to server
+        socket.send(JSON.stringify({
+            x1: mouseX,
+            y1: mouseY,
+            x2: e.offsetX,
+            y2: e.offsetY
+        }));
+
         [mouseX, mouseY] = [e.offsetX, e.offsetY];
     }
 
@@ -32,8 +40,20 @@ canvas.height = canvas.width/aspect_ratio ;
     canvas.addEventListener('mouseup', () => isDrawing = false);
     canvas.addEventListener('mouseout', () => isDrawing = false);
 
-    
-   
+// connection to server
+// create a web socket connection to server
+let socket = new WebSocket('ws://localhost:8080');
 
+socket.onopen = function(){
+    console.log("connected to web socket",'server');
+}
+
+socket.onmessage = function(event) {
+      const data = JSON.parse(event.data);
+      ctx.beginPath();
+      ctx.moveTo(data.x1, data.y1);
+      ctx.lineTo(data.x2, data.y2);
+      ctx.stroke();
+    };
 
 console.log("this code is runing");
