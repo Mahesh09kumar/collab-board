@@ -28,7 +28,6 @@ canvas.height = canvas.width/aspect_ratio ;
         }));
         console.log("1 : end of funtion", mouseX, mouseY,e.offsetX, e.offsetY);
         [mouseX, mouseY] = [e.offsetX, e.offsetY];
-        console.log("2 : end of funtion", mouseX, mouseY,e.offsetX, e.offsetY);
     }
 
     canvas.addEventListener('mousedown', (e) => {
