@@ -18,7 +18,6 @@ canvas.height = canvas.width/aspect_ratio ;
         ctx.beginPath();
         ctx.moveTo(mouseX, mouseY);
         ctx.lineTo(e.offsetX, e.offsetY);
-        console.log(mouseX,mouseY);
         ctx.stroke();
        //sends data to server
         socket.send(JSON.stringify({
@@ -27,8 +26,9 @@ canvas.height = canvas.width/aspect_ratio ;
             x2: e.offsetX,
             y2: e.offsetY
         }));
-
+        console.log("1 : end of funtion", mouseX, mouseY,e.offsetX, e.offsetY);
         [mouseX, mouseY] = [e.offsetX, e.offsetY];
+        console.log("2 : end of funtion", mouseX, mouseY,e.offsetX, e.offsetY);
     }
 
     canvas.addEventListener('mousedown', (e) => {
